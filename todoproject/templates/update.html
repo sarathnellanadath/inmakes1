@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="container">
+            <form  method="post" class="p-3 shadow">{% csrf_token %}
+                <h4>Update <b style="color:#ECE74A ;"> ({{tasks.name}}) </b>  </h4>
+                <div class="form-group">
+                    <br>
+                    {{form.as_p}}
+                    <br>
+                    <button type="submit" class="btn btn-warning">UPDATE</button>
+                </div>
+            </form>
+        </div>
+{% endblock %}

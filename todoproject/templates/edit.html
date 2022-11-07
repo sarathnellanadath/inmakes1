@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="container">
+            <form  method="post" class="p-3 shadow">{% csrf_token %}
+                <h4>Update <b style="color:#ECE74A ;"> ({{tasks.name}}) </b>  </h4>
+                <div class="form-group">
+                    <br>
+                    <label>Update name of task</label> {{f.name}}
+                    <br>
+                    </div>
+                <div class="form-group">
+                    <br>
+                    <label>Update priority of task</label> {{f.priority}}
+                    <br>
+                </div>
+                 <div class="form-group">
+                     <br>
+                     <label>Update date of task</label> {{f.date}}
+                     <br>
+                </div>
+                <div class="form-group">
+                    <br>
+                     <button type="submit" class="btn btn-warning">UPDATE</button>
+                    <a class="btn btn-info" href="/">CANCEL</a>
+                </div>
+            </form>
+        </div>
+{% endblock %}

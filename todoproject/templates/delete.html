@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="container">
+            <form  method="post" class="p-3 shadow">{% csrf_token %}
+                <h4>Do you want to Delete Task (<b style="color:red;"> {{tasks.name}}</b>) ? </h4><br>
+                <div class="form-group">
+                    <br>
+                     <button type="submit" class="btn btn-danger">YES</button>
+                    <a class="btn btn-success" href="/">NO</a>
+                </div>
+            </form>
+        </div>
+
+{% endblock %}
